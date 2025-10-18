@@ -13,8 +13,8 @@
     }
 ],
     "author": "WhiskyHibiki",
-    "socket": false,
     "manifest": "https://raw.githubusercontent.com/WhiskyHibiki/hibiki-darkfantasy/main/system.json",
     "download": "https://github.com/WhiskyHibiki/hibiki-darkfantasy/archive/refs/heads/main.zip",
-    "license": "MIT"
+    "license": "MIT",
+    "socket": false
 }

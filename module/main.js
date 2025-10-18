@@ -1,3 +1,3 @@
 Hooks.once("init", () => {
-    console.log("✅ Initializing -> [HibikiDarkFantasy]");
+    console.log("✅ Initializing >>> [HibikiDarkFantasy]");
 })
