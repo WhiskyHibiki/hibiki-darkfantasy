@@ -1,0 +1,15 @@
+<section class="hibiki-actor">
+    <header class="actor-header">
+        <h1>{{name}}</h1>
+    </header>
+
+    <div class="actor-attributes grid grid-2col">
+        {{#each system.attributes as |value key|}}
+            <div class="attribute">
+                <h3 class="attr-name">{{key}}</h3>
+                <p class="attr-stat">stat: {{value}}</p>
+                <p class="attr-mod">mod: {{lookup ../system.modifiers key}}</p>
+            </div>
+        {{/each}}
+    </div>
+</section>
