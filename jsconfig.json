@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "types": ["@league-of-foundry-developers/foundry-vtt-types"],
+    "baseUrl": "."
+  },
+  "include": ["module/**/*.js", "system.json"]
+}

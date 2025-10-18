@@ -1,0 +1,20 @@
+{
+    "id": "hibiki-darkfantasy",
+    "title": "Hibiki's Dark Fantasy System",
+    "description": "Custom Foundry VTT system inspired by Dark Fantasy homebrew rules.",
+    "version": "1.0.0",
+    "compatibility": {
+      "minimum": "13",
+      "verified": "13"
+},
+    "esmodules": ["module/main.js"],
+    "languages": [
+    { "lang": "en", "name": "English", "path": "lang/en.json", "flags": {}
+    }
+],
+    "author": "WhiskyHibiki",
+    "socket": false,
+    "manifest": "https://raw.githubusercontent.com/WhiskyHibiki/HibikisModuleFoundry/main/system.json",
+    "download": "https://github.com/WhiskyHibiki/HibikisModuleFoundry/archive/refs/heads/main.zip",
+    "license": "MIT"
+}
