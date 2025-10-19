@@ -1,0 +1,76 @@
+<section class="hibiki-df hdf-sheet">
+    <!-- HEADER -->
+    <header class="hdf-header flexrow">
+        <div class="hdf-portrait">
+            <img src="{{img}}" alt="{{name}}" data-edit="img"/>
+        </div>
+
+        <div class="hdf-title flexcol">
+            <input class="hdf-name" type="text" name="name" value="{{name}}" placeholder="Character Name"/>
+            <div class="hdf-meta flexrow">
+                <label class="hdf-field">
+                    <span>Level</span>
+                    <input type="number" name="system.level" value="{{system.level}}" min="0"/>
+                </label>
+                <label class="hdf-field">
+                    <span>XP</span>
+                    <input type="number" name="system.xp" value="{{system.xp}}" min="0"/>
+                </label>
+                <label class="hdf-field">
+                    <span>Proficiency</span>
+                    <input type="number" name="system.prof" value="{{system.prof}}" step="1"/>
+                </label>
+            </div>
+        </div>
+
+        <div class="hdf-core grid grid-3col">
+            <label class="hdf-field">
+                <span>AC</span>
+                <input type="number" name="system.ac" value="{{system.ac}}" min="0"/>
+            </label>
+            <label class="hdf-field">
+                <span>HP</span>
+                <div class="flexrow">
+                    <input type="number" name="system.hp.value" value="{{system.hp.value}}" min="0"/>
+                    <span class="sep">/</span>
+                    <input type="number" name="system.hp.max" value="{{system.hp.max}}" min="0"/>
+                </div>
+            </label>
+            <label class="hdf-field">
+                <span>Speed</span>
+                <input type="text" name="system.speed" value="{{system.speed}}"/>
+            </label>
+        </div>
+    </header>
+
+    <!-- ATTRIBUTES like big circles -->
+    <section class="hdf-attributes grid grid-6col">
+        {{#each system.attributes as |value key|}}
+            <div class="hdf-attr">
+                <div class="hdf-attr-mod">
+                    {{lookup ../system.modifiers key}}
+                </div>
+                <div class="hdf-attr-key">{{key}}</div>
+                <input class="hdf-attr-val" type="number" name="system.attributes.{{key}}" value="{{value}}" />
+            </div>
+        {{/each}}
+    </section>
+
+    <!-- SKILLS / CHECKS placeholder (можно связать позже) -->
+    <section class="hdf-panels grid grid-2col">
+        <div class="card">
+            <h3>Skills</h3>
+            <ul class="hdf-list">
+                {{!-- пример статических скиллов; позже привяжешь к своим данным --}}
+                <li class="flexrow"><span>Acrobatics (DEX)</span><input type="number" value="{{lookup system.modifiers 'dexterity'}}" disabled></li>
+                <li class="flexrow"><span>Athletics (STR)</span><input type="number" value="{{lookup system.modifiers 'strength'}}" disabled></li>
+                <li class="flexrow"><span>Perception (WIS)</span><input type="number" value="{{lookup system.modifiers 'wisdom'}}" disabled></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Notes</h3>
+            <textarea name="system.notes" rows="8">{{system.notes}}</textarea>
+        </div>
+    </section>
+</section>

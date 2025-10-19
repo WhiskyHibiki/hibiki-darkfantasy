@@ -1,0 +1,34 @@
+/* базовые */
+.hibiki-df .hdf-sheet { padding: 12px; gap: 12px; }
+.hibiki-df .hdf-sheet .card { background: var(--color-bg, rgba(0,0,0,0.05)); border-radius: 12px; padding: 10px; }
+.hibiki-df .flexrow { display: flex; align-items: center; gap: 8px; }
+.hibiki-df .flexcol { display: flex; flex-direction: column; gap: 8px; }
+.hibiki-df .grid { display: grid; gap: 8px; }
+.hibiki-df .grid-2col { grid-template-columns: 1fr 1fr; }
+.hibiki-df .grid-3col { grid-template-columns: repeat(3, 1fr); }
+.hibiki-df .grid-6col { grid-template-columns: repeat(6, 1fr); }
+.hibiki-df .sep { padding: 0 4px; opacity: .6; }
+
+.hibiki-df .hdf-header { gap: 12px; }
+.hibiki-df .hdf-portrait { width: 96px; height: 96px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,.15); }
+.hibiki-df .hdf-portrait img { width: 100%; height: 100%; object-fit: cover; }
+
+.hibiki-df .hdf-name { font-size: 20px; font-weight: 700; border: none; border-bottom: 1px dashed rgba(0,0,0,.2); background: transparent; }
+.hibiki-df .hdf-meta .hdf-field, .hdf-core .hdf-field { display: flex; flex-direction: column; gap: 4px; }
+.hibiki-df .hdf-field > span { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; opacity: .7; }
+.hibiki-df .hdf-field input { width: 100%; }
+
+.hibiki-df .hdf-attributes { margin-top: 6px; }
+.hibiki-df .hdf-attr { display: grid; place-items: center; gap: 6px; background: rgba(0,0,0,.03); border-radius: 12px; padding: 8px; }
+.hibiki-df .hdf-attr-mod {
+    width: 48px; height: 48px; border-radius: 50%;
+    display: grid; place-items: center;
+    font-weight: 700; font-size: 16px;
+    border: 2px solid rgba(0,0,0,.2);
+}
+.hibiki-df .hdf-attr-key { font-size: 11px; text-transform: uppercase; opacity: .75; }
+.hibiki-df .hdf-attr-val { width: 62px; text-align: center; }
+
+.hibiki-df .hdf-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.hibiki-df .hdf-list li { justify-content: space-between; }
+.hibiki-df .hdf-list input[disabled] { width: 56px; text-align: center; opacity: .85; }
